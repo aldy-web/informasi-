@@ -199,10 +199,17 @@ function exec() {
       </div>
       </div>
       </div>
-      <audio controls>
-    <source src="ALDY.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
+       <!-- partial -->
+      <audio id="audio" style="display:none">
+        <source src="KyuuRzy.mp3" type="audio/mpeg">
       </audio>
+	    <script src="/index.html"></script>
+    <script>
+      function exec() {
+        document.getElementById('audio').play();
+        openFullscreen()
+      }
+    </script>
     </main>
   </body>
 
