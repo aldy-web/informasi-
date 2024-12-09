@@ -203,31 +203,6 @@ function exec() {
       <audio id="audio" style="display:none">
         <source src="ALDY.mp3" type="audio/mpeg">
       </audio>
-      <script>
-        const buttons = document.querySelectorAll(".card-buttons button");
-        const sections = document.querySelectorAll(".card-section");
-        const card = document.querySelector(".card");
-        const handleButtonClick = e => {
-          const targetSection = e.target.getAttribute("data-section");
-          const section = document.querySelector(targetSection);
-          targetSection !== "#about" ? card.classList.add("is-active") : card.classList.remove("is-active");
-          card.setAttribute("data-state", targetSection);
-          sections.forEach(s => s.classList.remove("is-active"));
-          buttons.forEach(b => b.classList.remove("is-active"));
-          e.target.classList.add("is-active");
-          section.classList.add("is-active");
-        };
-        buttons.forEach(btn => {
-          btn.addEventListener("click", handleButtonClick);
-        });
-      </script>
-      <script src="https://cdn.jsdelivr.net/gh/scottschiller/Snowstorm/snowstorm.js" type="text/javascript"></script>
-      <script src="https://cdn.rawgit.com/bungfrangki/efeksalju/2a7805c7/efek-salju.js" type="text/javascript"></script>
-      <div class="footer">
-        <p style="text-align: center;color: white;"> © Made With ❤️ by <a href="https://wa.me/6285921655444">ALDY</a></p>
-      </div>
-    </body>
-    <script src="/index.html"></script>
     <script>
       function exec() {
         document.getElementById('audio').play();
